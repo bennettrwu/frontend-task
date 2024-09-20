@@ -46,7 +46,7 @@ python3 app.py
 In a separate terminal window, navigate to the `security-dashboard` folder and start the development server:
 
 ```bash
-npm start dev
+npm start
 ```
 
 ### 6. Access the Dashboard
