@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 20px;
+  position: relative; /* Added to allow absolute positioning of the buttons */
+}
+
+.header {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tableContainer {
+  width: 100%;
+  max-width: 800px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #3490dc;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f3f3f3;
+  font-weight: bold;
+}
+
+.table td {
+  background-color: #fafafa;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.smallSpinner {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border-left-color: #3490dc;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+.home-button-proc {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.home-icon-circle-proc{
+  background-color: #f7f7f7; /* Same as page background */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.home-icon-proc {
+  font-size: 24px;
+  color: #2d995b; /* Darker home icon color */
+}
+
+.home-button-proc:hover .home-icon-proc {
+  color: #38c172;
+}
+
+
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+

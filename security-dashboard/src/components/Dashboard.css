@@ -1,0 +1,219 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  transition: margin-left 0.3s; /* Smooth transition for main content */
+}
+
+.menu-open .main-content {
+  margin-left: 130px; /* Adjust as per your side menu width */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.middle-section {
+  flex: 1; /* Takes up remaining space */
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.menu-line {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-right: 10px;
+}
+
+.triangle-left {
+  border-right: 15px solid #f0f0f0; /* Color matching the page background */
+}
+
+.triangle-right {
+  border-left: 15px solid #f0f0f0; /* Color matching the page background */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 100%; /* Ensures the user info section spans the full width of the side menu */
+  box-sizing: border-box;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%;
+  margin-right: 10px;
+  background-image: url('https://www.w3schools.com/html/pic_trulli.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image within the element */
+}
+
+.user-name {
+  font-weight: bold;
+  color: white;
+}
+
+.sign-out {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.side-menu {
+  position: absolute;
+  left: -130px; /* Adjust width as per your design */
+  top: 0;
+  height: 100%;
+  width: 130px; /* Adjust width as per your design */
+  background-color: #333;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.menu-item {
+  width: 100%; /* Ensures the menu item spans the full width of the side menu */
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center; /* Centers the text horizontally */
+}
+
+.menu-item a {
+  color: inherit; /* Ensure link color is inherited */
+  text-decoration: none;
+}
+
+.menu-item a:visited,
+.menu-item a:focus,
+.menu-item a:active {
+  color: inherit; /* Maintain the inherited color */
+}
+
+.menu-item:hover {
+  background-color: #555;
+}
+
+.collapse-arrow-container {
+  position: absolute;
+  top: 50%; /* Centers the arrow vertically */
+  right: -10px; /* Adjust this value to move the arrow outside the menu */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-left 0.3s; /* Smooth transition for main content */
+}
+
+.alerts-table {
+  margin-top: 1rem;
+}
+
+.alerts-table h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #f8f8f8;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center; /* Centers the text horizontally */
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.no-alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

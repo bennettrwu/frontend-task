@@ -1,0 +1,68 @@
+.upload-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 20px;
+  position: relative; /* Added to allow absolute positioning of the home button */
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.upload-button {
+  background-color: #3490dc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.upload-button:hover {
+  background-color: #2779bd;
+}
+
+.home-button-up {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.home-icon-circle-up {
+  background-color: #f7f7f7; /* Same as page background */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.home-icon-up {
+  font-size: 24px;
+  color: #2d995b; /* Darker home icon color */
+}
+
+.home-button-up:hover .home-icon-up {
+  color: #38c172;
+}
+
+
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
