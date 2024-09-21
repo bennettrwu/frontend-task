@@ -4,7 +4,6 @@ import Dashboard from './components/Dashboard';
 import UploadPage from './components/UploadPage';
 import ProcessingPage from './components/ProcessingPage';
 import AlertPage from './components/AlertPage';
-import NetworkPage from './components/NetworkPage';
 import LoginPage from './components/LoginPage';
 import CreateUserPage from './components/CreateUserPage';
 import Profile from './components/Profile'
@@ -42,7 +41,6 @@ const App = () => {
         <Route path="/profile" element={auth ? <Profile /> : <Navigate to="/login" />} />
         <Route path="/processing" element={auth ? <ProcessingPage /> : <Navigate to="/login" />} />
         <Route path="/alert/:alertId" element={auth ? <AlertPage /> : <Navigate to="/login" />} />
-        <Route path="/network/:alertId" element={auth ? <NetworkPage /> : <Navigate to="/login" />} />
         <Route path="/" element={auth ? <Dashboard setAuth={setAuth}/> : <Navigate to="/login" />} />
       </Routes>
     </Router>

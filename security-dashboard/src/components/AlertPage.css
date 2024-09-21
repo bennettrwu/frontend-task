@@ -1,12 +1,12 @@
-/* src/components/NetworkPage.css */
+/* src/components/AlertPage.css */
 
 .network-container {
-  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  left: 0;
 }
 
 #network-visualization {
@@ -16,7 +16,7 @@
 
 /* Toggle button styling */
 .toggle-button {
-/*  position: absolute;*/
+  /*  position: absolute;*/
   top: 10px;
   left: 10px;
   background-color: #007bff;
@@ -50,25 +50,31 @@
 .scrollable-popup {
   max-height: 150px;
   overflow-y: auto;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: transparent; /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: transparent;
+  /* Firefox */
 }
 
 .scrollable-popup::-webkit-scrollbar {
-  width: 8px; /* WebKit */
+  width: 8px;
+  /* WebKit */
 }
 
 .scrollable-popup::-webkit-scrollbar-track {
-  background: transparent; /* WebKit */
+  background: transparent;
+  /* WebKit */
 }
 
 .scrollable-popup::-webkit-scrollbar-thumb {
-  background: grey; /* WebKit */
+  background: grey;
+  /* WebKit */
   border-radius: 8px;
 }
 
 .scrollable-popup::-webkit-scrollbar-thumb:hover {
-  background: darkgrey; /* WebKit */
+  background: darkgrey;
+  /* WebKit */
 }
 
 /* Popup edge and node styling */
