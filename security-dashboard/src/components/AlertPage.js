@@ -5,8 +5,6 @@ import { Rnd } from 'react-rnd';
 import './AlertPage.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import uuid from 'react-uuid'
-
 const AlertPage = () => {
   const { alertId } = useParams();
   const [alertData, setAlertData] = useState(null);
@@ -17,7 +15,7 @@ const AlertPage = () => {
   const [clickedEdge, setClickedEdge] = useState(null);
   const [clickedNode, setClickedNode] = useState(null);
   const [showTransparent, setShowTransparent] = useState(false);
-  const [panelOpen, setPanelOpen] = useState(true);
+  const [panelOpen, setPanelOpen] = useState(false);
 
   const formatFilePath = (filePath) => {
     const parts = filePath.split('\\');
@@ -198,12 +196,16 @@ const AlertPage = () => {
       <div className="w-full">
         <div className='p-10 w-full shadow'>
           <div className='flex justify-between content-center h-10'>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center" onClick={() => navigate('/')}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-              </svg>
-              <span>Return to Dashboard</span>
-            </button>
+            <div className='flex content-center'> 
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center" onClick={() => navigate('/')}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+                <span>Return to Dashboard</span>
+              </button>
+
+              <p className='font-bold text-4xl ml-4'>{alertData.name}</p>
+            </div>
 
             <div className='flex content-center'>
               {(edges.some(e => e.transparent) || nodes.some(n => n.transparent)) && <div className='font-bold py-2 px-4 rounded mr-4 inline-flex items-center'>
@@ -235,7 +237,7 @@ const AlertPage = () => {
                   <td className="border px-4 py-2 font-bold">Name</td>
                   <td className="border px-4 py-2 font-bold">Description</td>
                   <td className="border px-4 py-2 font-bold">Machine</td>
-                  <td className="border px-4 py-2 font-bold">Occurred On</td>
+                  <td className="border px-4 py-2 font-bold">Timestamp</td>
                   <td className="border px-4 py-2 font-bold">Severity</td>
                   <td className="border px-4 py-2 font-bold">Program</td>
                 </tr>
