@@ -196,8 +196,24 @@ def get_alerts():
     global uploadCount
     try:
         if uploadCount > 1:
-            alerts = Alert.query.with_entities(Alert.id, Alert.name, Alert.description).all()
-            alert_list = [{'id': alert.id, 'name': alert.name, 'description': alert.description} for alert in alerts]
+            alerts = Alert.query.with_entities(
+                Alert.id, 
+                Alert.name, 
+                Alert.description,
+                Alert.machine,
+                Alert.occurred_on,
+                Alert.severity,
+                Alert.program
+            ).all()
+            alert_list = [{
+                'id': alert.id,
+                'name': alert.name,
+                'description': alert.description,
+                'machine': alert.machine,
+                'occurred_on': alert.occurred_on,
+                'severity': alert.severity,
+                'program': alert.program
+            } for alert in alerts]
         else:
             alert_list = []
 
