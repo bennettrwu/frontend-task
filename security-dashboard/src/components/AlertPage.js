@@ -4,6 +4,7 @@ import Graph from 'react-vis-network-graph';
 import { Rnd } from 'react-rnd';
 import './AlertPage.css';
 import { useNavigate, useParams } from 'react-router-dom';
+import SeverityTag from './SeverityTag';
 
 const AlertPage = () => {
   const { alertId } = useParams();
@@ -196,7 +197,7 @@ const AlertPage = () => {
       <div className="w-full">
         <div className='p-10 w-full shadow'>
           <div className='flex justify-between content-center h-10'>
-            <div className='flex content-center'> 
+            <div className='flex content-center'>
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center" onClick={() => navigate('/')}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -249,7 +250,7 @@ const AlertPage = () => {
                   <td className="border px-4 py-2">{alertData.description}</td>
                   <td className="border px-4 py-2">{alertData.machine}</td>
                   <td className="border px-4 py-2">{alertData.occurred_on}</td>
-                  <td className="border px-4 py-2">{alertData.severity}</td>
+                  <td className="border px-4 py-2"><SeverityTag severity={alertData.severity} /></td>
                   <td className="border px-4 py-2">{alertData.program}</td>
                 </tr>
               </tbody>

@@ -56,10 +56,10 @@ def add_dummy_data():
     # Define a list of dummy alerts
     global uploadCount
     alerts = [
-        {"id": 1, "name": "Alert1", "description": "Multi_alert_Attack", "machine": "Machine 1", "occurred_on": "Varied", "severity": "Medium", "program": "Varied"},
+        {"id": 1, "name": "Alert1", "description": "Multi_alert_Attack", "machine": "Machine 1", "occurred_on": "Varied", "severity": "Low", "program": "Varied"},
         {"id": 2, "name": "Alert2", "description": "Execution - SysInternals Use", "machine": "Machine 1", "occurred_on": "2022-07-19 16:01:48.497418", "severity": "Medium", "program": "sysmon.exe"},
-        {"id": 3, "name": "Alert3", "description": "Persistence - Regmod Run or Runonce Key Modification", "machine": "Machine 1", "occurred_on": "2022-07-19 17:24:44.629059", "severity": "Medium", "program": "plugin-container.exe"},
-        {"id": 4, "name": "Alert4", "description": "Credential Access - LLMNR/NBT-NS Poisoning - LLMNR Traffic Detected", "machine": "Machine 1", "occurred_on": "2022-07-19 16:01:48.544218", "severity": "Medium", "program": "svchost.exe"},
+        {"id": 3, "name": "Alert3", "description": "Persistence - Regmod Run or Runonce Key Modification", "machine": "Machine 1", "occurred_on": "2022-07-19 17:24:44.629059", "severity": "High", "program": "plugin-container.exe"},
+        {"id": 4, "name": "Alert4", "description": "Credential Access - LLMNR/NBT-NS Poisoning - LLMNR Traffic Detected", "machine": "Machine 1", "occurred_on": "2022-07-19 16:01:48.544218", "severity": "Critical", "program": "svchost.exe"},
         {"id": 5, "name": "Alert5", "description": "Multi_alert_Attack", "machine": "Machine 2", "occurred_on": "Varied", "severity": "Medium", "program": "Varied"},
         {"id": 6, "name": "Alert6", "description": "Initial Access - MS Office Applications Loading Suspicious Visual Basic Libraries", "machine": "Machine 2", "occurred_on": "2022-07-19 19:34:36.893354", "severity": "Medium", "program": "excel.exe"},
         {"id": 7, "name": "Alert7", "description": "Persistence - Regmod Run or Runonce Key Modification", "machine": "Machine 2", "occurred_on": "2022-07-19 19:46:57.579092", "severity": "Medium", "program": "plugin-container.exe"},
