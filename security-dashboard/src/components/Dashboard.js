@@ -88,7 +88,11 @@ const Dashboard = ({ setAuth }) => {
   };
 
   const updateSort = (newKey) => {
-    if (newKey === sortKey) setSortAcs(!sortAcs);
+    if (newKey === sortKey) {
+      setSortAcs(!sortAcs);
+    } else {
+      setSortAcs(true);
+    }
     setSortKey(newKey);
   }
 
