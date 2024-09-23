@@ -52,7 +52,12 @@ const LoginPage = ({ setAuth }) => {
         {error && <p className="error">{error}</p>}
         <button type="submit" className="login-button">Login</button>
       </form>
-      <p>Don't have an account? <a href="/create-user">Create one</a></p>
+
+      <p>
+        <u>Don't have an account? </u>
+        <br></br>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded inline-flex items-center" onClick={() => navigate('/create-user')}>Create One</button>
+      </p>
     </div>
   );
 };

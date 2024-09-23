@@ -199,8 +199,8 @@ const AlertPage = () => {
           <div className='flex justify-between content-center h-10'>
             <div className='flex content-center'>
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center" onClick={() => navigate('/')}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
                 <span>Return to Dashboard</span>
               </button>
@@ -237,21 +237,21 @@ const AlertPage = () => {
                   <td className="border px-4 py-2 font-bold">ID</td>
                   <td className="border px-4 py-2 font-bold">Name</td>
                   <td className="border px-4 py-2 font-bold">Description</td>
-                  <td className="border px-4 py-2 font-bold">Machine</td>
-                  <td className="border px-4 py-2 font-bold">Timestamp</td>
                   <td className="border px-4 py-2 font-bold">Severity</td>
+                  <td className="border px-4 py-2 font-bold">Machine</td>
                   <td className="border px-4 py-2 font-bold">Program</td>
+                  <td className="border px-4 py-2 font-bold">Timestamp</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border px-4 py-2">{alertData.id}</td>
-                  <td className="border px-4 py-2">{alertData.name}</td>
-                  <td className="border px-4 py-2">{alertData.description}</td>
-                  <td className="border px-4 py-2">{alertData.machine}</td>
-                  <td className="border px-4 py-2">{alertData.occurred_on}</td>
-                  <td className="border px-4 py-2"><SeverityTag severity={alertData.severity} /></td>
-                  <td className="border px-4 py-2">{alertData.program}</td>
+                  <td className="border px-4 py-2 monofont">{alertData.id}</td>
+                  <td className="border px-4 py-2 monofont">{alertData.name}</td>
+                  <td className="border px-4 py-2 monofont">{alertData.description}</td>
+                  <td className="border px-4 py-2 monofont"><SeverityTag severity={alertData.severity} /></td>
+                  <td className="border px-4 py-2 monofont">{alertData.machine}</td>
+                  <td className="border px-4 py-2 monofont">{alertData.program}</td>
+                  <td className="border px-4 py-2 monofont">{alertData.occurred_on}</td>
                 </tr>
               </tbody>
             </table>
